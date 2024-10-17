@@ -2,7 +2,7 @@
 
 //Selezioniamo gli elementi dalla DOM, in questo caso la lista
 
-const mailListEL = document.querySelector('.ul')
+const mailListEL = document.querySelector('ul')
 const btnGenerateEL = document.querySelector('button')
 
   
@@ -20,12 +20,15 @@ btnGenerateEL.addEventListener('click', function(){
 
 
   //creo un elemento lista tramite createelement  
+
+  for(let i = 0; i < 10; i++){
   const listEl = document.createElement("li")
 
   listEl.innerText = `new mail: ${mail}`
 
   //console.log(listEl)
   mailListEL.appendChild(listEl)
+}
   
 })
 
