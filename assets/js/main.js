@@ -5,18 +5,18 @@
 const mailListEL = document.querySelector('.ul')
 const btnGenerateEL = document.querySelector('button')
 
+  
 btnGenerateEL.addEventListener('click', function(){
 
   axios("https://flynn.boolean.careers/exercises/api/random/mail")
-.then(response =>{
-  //richiesta al server e la stampo
-  console.log(response);
-
- //inserisco in una variabile la risposta del server
-  const mail = response.data.respose;
-
-  console.log(mail);
+  .then(response =>{
+    //richiesta al server e la stampo
+    console.log(response);
   
+   //inserisco in una variabile la risposta del server
+    const mail = response.data.response;
+  
+    console.log(mail);
 
 
   //creo un elemento lista tramite createelement  
@@ -31,30 +31,3 @@ btnGenerateEL.addEventListener('click', function(){
 
 })
 
-/*axios("https://flynn.boolean.careers/exercises/api/random/mail")
-.then(respose => respose.json())
-  .then(data => {
-    console.log(data);
-
-   ////document.querySelector('li').innerHTML = data.response
-
-
-    
-
-  })
-
-  axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
-  .then(response => {
-    const data = response.data;
-
-    console.log(data);
-    
-
-
-  })
-.cath(error =>{ 
-    console.error(error)
-})
-.then(()=>{
-
-})*/
