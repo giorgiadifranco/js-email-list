@@ -9,9 +9,10 @@ btnGenerateEL.addEventListener('click', function(){
 
   axios("https://flynn.boolean.careers/exercises/api/random/mail")
 .then(respose =>{
+  //richiesta al server e la stampo
   console.log(response);
 
-
+ //inserisco in una variabile la risposta del server
   const mail = response.data.response;
   
 })
