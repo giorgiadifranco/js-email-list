@@ -9,6 +9,9 @@ const btnGenerateEL = document.querySelector('button')
 btnGenerateEL.addEventListener('click', function(){
 
   for(let i = 0; i < 10; i++){
+    
+    mailListEL.innerHTML = ''
+  
 
   axios("https://flynn.boolean.careers/exercises/api/random/mail")
   .then(response =>{
